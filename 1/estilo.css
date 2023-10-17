@@ -1,0 +1,99 @@
+:root{
+    --color-principal:#FFF;
+}
+*{
+    padding: 0;
+    margin: 0;
+    color: #fff;
+}
+
+.contenedor{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cuadrado{
+    width: 500px;
+    height: 500px;
+    background:linear-gradient(to bottom left, #50C2C8 0%,#4447A4 100% );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+}
+.cuadrado__numeros{
+    width: calc(100%/2);
+    height: 50%;
+    display: flex;
+    top: 3.5rem;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.cuadrado__numeros__uno{
+    height: 70%;
+    width: 15%;
+    background-color: var(--color-principal);
+    position: absolute;
+    left: 7px;
+    z-index: 3;
+    filter: drop-shadow(1px 1px 9px #0000002f);
+}
+.cuadrado__numeros__detalle{
+    height: 30%;
+    width: 15%;
+    position: absolute;
+    top: 15.4%;
+    left: -11%;
+    background-color: var(--color-principal);
+    transform: rotate(50deg);
+}
+.cuadrado__numeros__cero__uno,.cuadrado__numeros__cero__dos{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 50%;
+    height: 70%;
+    border-radius: 50%;
+
+    background-color: var(--color-principal);
+    filter: drop-shadow(1px 1px 9px #0000002f);
+
+    z-index: 2;
+}
+.cuadrado__numeros__cero__uno{
+    left: 2rem;
+}
+.cuadrado__numeros__cero__dos{
+    z-index: 1;
+}
+.cuadrado__numeros__cero__uno::before,.cuadrado__numeros__cero__dos::before{
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    background:linear-gradient(to bottom left, #50C2C8 0%,#4447A4 100% );
+}
+
+.cuadrado__letras{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: calc(100%/2);
+    height: 50%;
+}
+.cuadrado__letras__dias{
+    font-size: 6rem;
+    line-height: 90%;
+    text-transform: uppercase;
+}
+
+.cuadrado__letras__css{
+    font-size: 2.85rem;
+    font-weight: bold;
+}
